@@ -30,7 +30,7 @@ CREATE TABLE if not exists Треки (
     id INT PRIMARY KEY,
     Название VARCHAR(60) NOT NULL,
     Длительность TIME NOT NULL,
-    Альбом INT NOT null references Aльбомы(id)
+    Альбом INT NOT null references Альбомы(id)
 );
 
 CREATE table if not exists Сборники (
@@ -43,3 +43,6 @@ CREATE table if not exists Сборники_Треки (
     Сборник_id INT NOT null references Сборники(id),
     Трек_id INT NOT null references Треки(id)
 );
+
+
+
